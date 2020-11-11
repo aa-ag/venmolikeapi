@@ -9,9 +9,9 @@ app.config['JSON_SORT_KEYS'] = False
 
 
 ## Endpoints
-accounts_endpoint = 'https://ellevest-take-home-aaron-aguerrevere.glitch.me/accounts/:id'
-users_endpoint = 'https://ellevest-take-home-aaron-aguerrevere.glitch.me/users/:id'
-likes_endpoint = 'https://ellevest-take-home-aaron-aguerrevere.glitch.me/likes/'
+accounts_endpoint = '[...]/accounts/:id'
+users_endpoint = '[...]/users/:id'
+likes_endpoint = '[...]/likes/'
 
 
 ## Helper code
@@ -71,7 +71,7 @@ def feed():
     ]
     '''
     # All transfers from transfers endpoint
-    transfers = requests.get('https://ellevest-take-home-aaron-aguerrevere.glitch.me/transfers').json()
+    transfers = requests.get('[...]/transfers').json()
     
     # Transfers that have "status" of "completed" only
     completed_transfers = [i for i in transfers if i['status'] == 'complete']
